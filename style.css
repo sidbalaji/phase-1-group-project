@@ -100,12 +100,15 @@ goes out of the box on hover
   color: black;
 }
 
+
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  font-size: large;
+  background-color: rgb(70, 48, 48);
+  text-align: center;
   color: white;
   transform: rotateY(180deg);
-}
+  }
 
 
 .dish-cards {
@@ -113,7 +116,6 @@ goes out of the box on hover
   flex-wrap: wrap;
 }
 
-/* Homepage CSS */
 
 .headline-text{
   font-family: 'Montserrat', sans-serif;
@@ -124,48 +126,9 @@ goes out of the box on hover
 .headline-padding{
   padding-top:40px
 }
-/* .some-page-wrapper {
-  margin-top: 60px;
-  background-color: white;
-}
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-}
-
-.left-column {
-  display: flex;
-  background-color: white;
-  height: 100px;
-  flex-direction: column;
-  margin:auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.right-column {
-  background-color: white;
-  height: 100px;
-} */
-/* .img-resize{
-  width: 50%;
-  height:auto
-} */
 .some-page-wrapper {
   margin-top: 60px;
-
 }
 
 .row {
@@ -181,8 +144,6 @@ goes out of the box on hover
   flex-basis: 100%;
   flex: 1;
 }
-
-
 
 .left-column {
   background-color: white;
@@ -210,3 +171,26 @@ goes out of the box on hover
     padding-bottom:20px;
   }
 }
+.text-align {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: large;
+}
+
+.darkMode {
+  background-color: rgb(89, 87, 87);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+
+}
+.darkMode > .box {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+ 
+}
+
