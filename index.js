@@ -40,7 +40,11 @@ function renderDish(dish){
     const singleDishBack = document.createElement('div') 
     singleDishBack.classList.add('flip-card-back')
     
-    singleDishBack.textContent = getIngredients(dish)
+    fetch(`https://api.spoonacular.com/recipes/${dish.id}/summary?apiKey=${apikey}`)
+    .then(res => res.json())
+    .then(resp => {
+        singleDishBack.textContent = resp.summary})
+    
     
     const singleDishImg = document.createElement("img")
     const singleDishTitle = document.createElement("h5")
@@ -73,9 +77,10 @@ function flipCard(singleDishInner){
 
 
 function getIngredients(dish){
-    
-    return fetch(`https://api.spoonacular.com/recipes/${dish.id}/summary?apiKey=${apikey}`)
-        .then(resp => resp.json())
-        .then(resp => resp.summary)
-    
+    // console.log(dish)
+    let response = fetch(`https://api.spoonacular.com/recipes/${dish.id}/summary?apiKey=${apikey}`)
+                    .then(res => res.json())
+                    .then(resp => resp.summary)
+    console.log(response)
+    return response
 }
