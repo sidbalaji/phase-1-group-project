@@ -16,7 +16,6 @@ cuisineSelector.addEventListener('change',(e)=> {
 function fetchCuisine(cuisine){
     fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apikey}&cuisine=${cuisine}`)
     .then(response => response.json())
-    // .then(dishes => renderDish(dishes.result))
     .then(dishes => {
         for(let dish of dishes.results){
             renderDish(dish)
@@ -33,16 +32,16 @@ function renderDish(dish){
     
     const singleDishInner = document.createElement('div')
     singleDishInner.classList.add('flip-card-inner')
-    singleDishInner.addEventListener('click',(e) => {console.log('click')
-                                                     flipCard(singleDishInner)}
-                                                     )
+    singleDishInner.addEventListener('click',(e) => {flipCard(singleDishInner)})
     
     const singleDishFront = document.createElement('div')
     singleDishFront.classList.add('flip-card-front')
     
     const singleDishBack = document.createElement('div') 
     singleDishBack.classList.add('flip-card-back')
-
+    
+    singleDishBack.textContent = getIngredients(dish)
+    
     const singleDishImg = document.createElement("img")
     const singleDishTitle = document.createElement("h5")
     
@@ -51,7 +50,6 @@ function renderDish(dish){
     singleDishTitle.textContent = dish.title
     
     
-    //singleDish.addEventListener('click', (e) => getIngredients(dish))
     singleDishFront.append(singleDishImg)
     singleDishFront.append(singleDishTitle)
         
@@ -76,8 +74,8 @@ function flipCard(singleDishInner){
 
 function getIngredients(dish){
     
-    fetch(`https://api.spoonacular.com/recipes/${dish.id}/summary?apiKey=${apikey}`)
+    return fetch(`https://api.spoonacular.com/recipes/${dish.id}/summary?apiKey=${apikey}`)
         .then(resp => resp.json())
-        .then(resp => alert(resp.summary))
+        .then(resp => resp.summary)
     
 }
