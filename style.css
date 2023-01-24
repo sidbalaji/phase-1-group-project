@@ -18,29 +18,20 @@ body {
 .cuisine-nav {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
   flex-direction: row;
-  /* overflow: auto; */
-  /* width: 100%; */
+
 }
 
-/* .cuisine-nav-img {
-  padding: 1rem;
-  width: 400px;
-  margin: 0.3em;
-
-
-} */
 .cuisine-text{
   font-family: 'Montserrat', sans-serif;
 
 }
 
-/* The flip card container - set the width and height to whatever you want. 
-We have added the border property to demonstrate that the flip itself 
-goes out of the box on hover 
+/* The flip card container - set the width and height to whatever you want.
+We have added the border property to demonstrate that the flip itself
+goes out of the box on hover
 (remove perspective if you don't want the 3D effect */
- 
+
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -91,4 +82,16 @@ goes out of the box on hover
 .dish-cards {
   display: flex;
   flex-wrap: wrap;
+}
+
+/* Homepage CSS */
+
+.headline-text{
+  font-family: 'Montserrat', sans-serif;
+}
+.hide-headline-div{
+  display:none
+}
+.headline-padding{
+  padding-top:40px
 }
