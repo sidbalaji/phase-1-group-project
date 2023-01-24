@@ -1,6 +1,7 @@
 body {
   background: white;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .maincontainer {
@@ -13,13 +14,37 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* .dropdown-menu{
+  display:block;
+  width:100%;
+  padding:20px;
+} */
+select {
+  display: inline-block;
+  height: 50px;
+  width: 925px;
+  outline: none;
+  color: #000000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #000;
+  background: white;
+  font-size:20px;
+  padding:10px;
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+}
 
 
 .cuisine-nav {
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: center; */
   flex-direction: row;
-
+  /* overflow: auto; */
+  /* width: 100%; */
 }
 
 .cuisine-text{
