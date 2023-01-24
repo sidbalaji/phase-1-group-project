@@ -1,6 +1,7 @@
 // Write your code here...
-const apikey = "59ba8dcc9c494084ae4431b4a5eaacdb"
 
+
+const apikey = env.apikey
 cuisineSelector = document.querySelector("#cuisine")
 cuisineSelector.addEventListener('change',(e)=> {
     let cuisine = e.target.value
