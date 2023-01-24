@@ -9,7 +9,7 @@ cuisineSelector.addEventListener('change',(e)=> {
     const cuisineCategories = document.querySelector('.cuisine-nav')
     cuisineCategories.innerHTML = ''
 
-    } )
+    })
 
 
 
