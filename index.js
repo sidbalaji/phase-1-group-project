@@ -3,12 +3,12 @@
 
 const apikey = env.apikey
 cuisineSelector = document.querySelector("#cuisine")
+const allDishDiv = document.querySelector("body > div.dish-cards")
+
 cuisineSelector.addEventListener('change',(e)=> {
     let cuisine = e.target.value
+    allDishDiv.innerHTML = ''
     resp = fetchCuisine(cuisine)
-    const cuisineCategories = document.querySelector('.cuisine-nav')
-    cuisineCategories.innerHTML = ''
-
     } )
 
 
@@ -17,7 +17,12 @@ function fetchCuisine(cuisine){
     fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apikey}&cuisine=${cuisine}`)
     .then(response => response.json())
     // .then(dishes => renderDish(dishes.result))
-    .then(dishes => {for(let dish of dishes.results){renderDish(dish)}})
+    .then(dishes => {
+        for(let dish of dishes.results){
+            renderDish(dish)
+            }
+        }
+          )
 
 }
 
