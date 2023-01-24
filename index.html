@@ -1,58 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
     <head>
-        <link rel="stylesheet" type="text/css" href="./style.css" />
-        <script defer src="./index.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" type="image/x-icon" href="./assets/calexico-img-logo.svg"/>
+        <meta charset="utf-8">
+        <script defer src="./index.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <title>Phase 1 Group Project</title>
     </head>
     <body>
        <header>
-       <!-- Project Name-->
-       <h1>Cuisine</h1>
+            <h1 class="cuisine-text">Phase 1 Group Project</h1>
        </header>
-       <div id="container">
-       
-       <!-- Dropdown menu -->
-       <div class="center">
-       
-        <select id = 'cuisine'>
-            <option>African</option>
-            <option>American</option>
-            <option>Chinese</option>
-            <option>French</option>
-            <option>Greek</option>
-            <option>Indian</option>
-            <option>Italian</option>
-            <option>Japanese</option>
-            <option>Korean</option>
-            <option>Latin American</option>
-            <option>Mediterranean</option>
-            <option>Mexican</option>
-            <option>Middle Eastern</option>
-            <option>Nordic</option>
-            <option>Thai</option>
-            
-          </select>
-       </div>
-       
-       <!-- Details -->
-            <!-- Image 
-            title
-            add event listener to click to list of recipes -->
-        <!-- Back button  -->
-        
-            <section >
 
-                <div>
-                    <!-- Add your menu items here! -->
-                </div>
-            </section>
+            <!-- Dropdown menu -->
+            <div id = 'cuisine-selector'>
+                <select id = 'cuisine' >
+                    <option>African</option>
+                    <option>American</option>
+                    <option>Chinese</option>
+                    <option>French</option>
+                    <option>Greek</option>
+                    <option>Indian</option>
+                    <option>Italian</option>
+                    <option>Japanese</option>
+                    <option>Korean</option>
+                    <option>Latin American</option>
+                    <option>Mediterranean</option>          
+                    <option>Mexican</option>
+                    <option>Middle Eastern</option>
+                    <option>Nordic</option>
+                    <option>Thai</option>
+                </select>
+            </div>
 
-                
-                
-            </section>
+       <!-- Main Container -->
+    <div class = 'dish-cards'>
+    
+       <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class = "cuisine-text" src="https://spoonacular.com/recipeImages/715424-312x231.jpg" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
         </div>
+      </div>
+      
+      
+    <!-- closing div tag for div with all 'cards' -->
+    </div> 
     </body>
+    
 </html>

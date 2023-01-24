@@ -1,115 +1,90 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Questrial', sans-serif;
-}
-
-
-header {
-    background-color: #414141;
-    padding: 20px;
-
-}
-
-header img {
-    height: 50px;
-    width: auto;
-}
-
-
-#menu {
-    width:25%;
-    height: 100%;
-    margin-left: 20px;
-    margin-top: 20px;
-    display:block;
-}
-.center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+body {
+  background: white;
   text-align: center;
-  margin-top: 100px;
-}
-#menu h2 {
-    font-size: 3em;
 }
 
-#container {
-    display:flex;
-    height:100%;
+.maincontainer {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#menu span {
-    padding: 0;
-    margin: 0;
-    font-size: 1.5rem;
+
+
+.cuisine-nav {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  flex-direction: row;
+  /* overflow: auto; */
+  /* width: 100%; */
 }
 
-#menu span:not(:last-child) { 
-    margin-bottom: .5em;  
+/* .cuisine-nav-img {
+  padding: 1rem;
+  width: 400px;
+  margin: 0.3em;
+
+
+} */
+.cuisine-text{
+  font-family: 'Montserrat', sans-serif;
+
 }
 
-#menu span {
-    float: left;
-    clear: left;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  padding: 25px;
 }
 
-#menu span:hover {
-    color: red;
-    cursor: pointer;
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-#dish {
-    position: relative;
-    margin-top: 20px;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-rotate {
+  transform: rotateY(180deg);
 }
 
-#dish-text {
-    position: absolute;
-    top:0px;
-    margin-left: 20px;
-    margin-top: 20px;
-    padding: 20px;
-    width:40%;
-    height:auto;
-    background-color: rgba(255, 255, 255, 0.75);
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
-#dish-name {
-    text-transform: uppercase;
-    font-size: 1.5em;
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
 }
 
-#dish-description {
-    font-size: 1.25em;
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
 
-input[type=submit] {
-    border:0px;
-    background:white;
-    font-size: 1em;
-    border: 1px solid black;
-    margin-left: 10px;
-    border-radius: 10px;
-}
 
-input[type=text] {
-    width: 150px;
-    font-size: 1em;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding:10px;
-}
-
-.icon {
-    width:2em;
-    height:auto;
-    vertical-align: middle;
-}
-
-form {
-    display:flex;
-    height: 30px;
+.dish-cards {
+  display: flex;
+  flex-wrap: wrap;
 }
