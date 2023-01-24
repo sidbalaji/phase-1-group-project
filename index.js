@@ -50,15 +50,12 @@ function renderDish(dish){
     singleDishBack.append(dishTitle)
     
     const singleDishImg = document.createElement("img")
-    const singleDishTitle = document.createElement("h5")
     
     singleDishImg.src = dish.image
     singleDishImg.alt = dish.title
-    singleDishTitle.textContent = dish.title
     
     
     singleDishFront.append(singleDishImg)
-    singleDishFront.append(singleDishTitle)
         
     singleDishInner.append(singleDishFront,singleDishBack)
     
