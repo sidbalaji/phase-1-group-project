@@ -9,7 +9,9 @@ cuisineSelector.addEventListener('change',(e)=> {
     let cuisine = e.target.value
     allDishDiv.innerHTML = ''
     resp = fetchCuisine(cuisine)
+
     } )
+
 
 
 
