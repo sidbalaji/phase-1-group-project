@@ -37,6 +37,10 @@ select {
   -moz-text-align-last: center;
 }
 
+.select-div-container{
+  padding-top:40px
+}
+
 
 .cuisine-nav {
   display: flex;
@@ -119,4 +123,90 @@ goes out of the box on hover
 }
 .headline-padding{
   padding-top:40px
+}
+/* .some-page-wrapper {
+  margin-top: 60px;
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-column {
+  display: flex;
+  background-color: white;
+  height: 100px;
+  flex-direction: column;
+  margin:auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-column {
+  background-color: white;
+  height: 100px;
+} */
+/* .img-resize{
+  width: 50%;
+  height:auto
+} */
+.some-page-wrapper {
+  margin-top: 60px;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+
+
+.left-column {
+  background-color: white;
+  height: 400px;
+  justify-content:center;
+  align-items:center;
+  padding-top: 300px
+}
+
+.right-column {
+    height: 100px;
+
+}
+.img-resize {
+  width: 75%;
+  height:auto
+}
+@media screen and (max-width: 480px) {
+  .left-column {
+    background-color: white;
+    height: 400px;
+    justify-content:center;
+    align-items:center;
+    padding-top: 20px;
+    padding-bottom:20px;
+  }
 }
